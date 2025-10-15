@@ -1,6 +1,6 @@
 # java-calculator-precourse
 
-# ✨ 문자열 덧셈 계산기 (String Add Calculator)
+## ✨ 문자열 덧셈 계산기 (String Add Calculator)
 
 입력한 문자열에서 숫자를 추출해 더하는 계산기를 구현하는 미션입니다.  
 이 프로젝트는 **우아한테크코스 프리코스 1주차 과제**로,  
@@ -15,7 +15,7 @@ TDD 기반의 단계적 개발과 명확한 커밋 단위를 연습하는 것을
 
 ---
 
-## 구현할 기능 목록
+## ✅ 구현할 기능 목록
 
 - [ ] 입력이 `""`(빈 문자열)인 경우 `0`을 반환한다.
 - [ ] 기본 구분자(쉼표 `,`, 콜론 `:`)로 숫자를 분리해 합을 계산한다.  
@@ -29,7 +29,7 @@ TDD 기반의 단계적 개발과 명확한 커밋 단위를 연습하는 것을
 - [ ] 정상 입력의 경우 합을 계산해 `결과 : <합계>` 형식으로 출력한다.
 
 ---
-##  예외 처리 규칙
+## ⚠️ 예외 처리 규칙
 
 | 상황 | 처리 방식 |
 |------|------------|
@@ -56,16 +56,17 @@ TDD 기반의 단계적 개발과 명확한 커밋 단위를 연습하는 것을
 | `"//;;\n1;2"` | 예외 발생 |
 
 ---
-##  프로그램 구조 (예정 설계)
+## 🧱 프로젝트 구조
+```plaintext
 src
-├─ Application.java # 프로그램 실행 진입점 (입출력 담당)
-├─ StringAddCalculator.java # 문자열 덧셈 로직의 핵심
-├─ parser
-│ └─ DelimiterParser.java # 구분자 파싱 (기본/커스텀)
-├─ validator
-│ └─ InputValidator.java # 입력 및 토큰 검증
-└─ util
-└─ StringUtils.java # 문자열 관련 유틸리티 (정규식 처리 등)
+ ├─ Application.java           # 프로그램 실행 진입점 (입출력 담당)
+ ├─ StringAddCalculator.java   # 문자열 덧셈 로직의 핵심
+ ├─ parser/                    # 구분자 관련 패키지
+ │   └─ DelimiterParser.java   # 구분자 파싱 (기본/커스텀)
+ ├─ validator/                 # 입력 검증 관련 패키지
+ │   └─ InputValidator.java    # 입력 및 토큰 검증
+ └─ util/                      # 유틸리티 패키지
+     └─ StringUtils.java       # 문자열 관련 유틸리티 (정규식 처리 등)
 
 ---
 
