@@ -1,6 +1,5 @@
-# java-calculator-precourse
 
-## ✨ 문자열 덧셈 계산기 (String Add Calculator)
+# ✨ 1주차 미션- 문자열 덧셈 계산기 (String Add Calculator)
 
 입력한 문자열에서 숫자를 추출해 더하는 계산기를 구현하는 미션입니다.  
 이 프로젝트는 **우아한테크코스 프리코스 1주차 과제**로,  
