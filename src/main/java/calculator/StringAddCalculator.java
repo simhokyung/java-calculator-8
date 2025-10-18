@@ -11,8 +11,15 @@ public class StringAddCalculator {
             return 0;
         }
 
-        //이후 단계(기분 구분자 처리)는 다음 단계에서 구현 예정
-        return 0;
+        String[] numbers = input.split("[,:]");
+
+        int sum = 0;
+        for(String number:numbers){
+            sum+=Integer.parseInt(number); //아직 입력값 검증은 안함(음수,숫자 아님 등)
+        }
+
+
+        return sum;
     }
 
 }
