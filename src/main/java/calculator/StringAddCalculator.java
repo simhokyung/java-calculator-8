@@ -25,9 +25,20 @@ public class StringAddCalculator {
                 throw new IllegalArgumentException("커스텀 구분자 형식이 올바르지 않습니다.");
             }
 
+            String raw = input.substring(2,newlineIndex);
 
+            //핵심: 구분자 검증을 먼저!
+            if(raw.isEmpty()){
+                throw new IllegalArgumentException("커스텀 구분자 형식이 올바르지 않습니다.");
+            }
+            if(raw.length()!=1){
+                throw new IllegalArgumentException("커스텀 구분자는 1글자만 허용됩니다.");
+            }
+
+
+            //검증 통과 후에만 구분자 확정.
             // "//"와 "\n" 사이를 커스텀 구분자로 사용 (정규식 이스케이프)
-            delimiter = Pattern.quote(input.substring(2, newlineIndex));
+            delimiter = Pattern.quote(raw);
             numbers = input.substring(newlineIndex+1);
         }
 
