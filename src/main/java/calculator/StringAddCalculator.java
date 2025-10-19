@@ -14,7 +14,8 @@ public class StringAddCalculator {
             return 0;
         }
 
-        // 문자열 리터럴로 입력받은 경우(\n을 실제 줄바꿈으로 변환)
+        // 콘솔에서 사용자가 '\n' 두 글자를 입력한 경우만 실제 개행으로 치환.
+        // 그 외 백슬래시 시퀀스는 변환하지 않음 (요구사항 범위 내에서만 정규화).
         input = input.replace("\\n", "\n");
 
         String delimiter = "[,:]"; //기본 구분자
@@ -69,7 +70,11 @@ public class StringAddCalculator {
         //합산(검증 통과 후에만 파싱)
         int sum = 0;
         for (String token : tokens) {
-            sum += Integer.parseInt(token);
+            try {
+                sum += Integer.parseInt(token);
+            } catch (NumberFormatException e) {
+                throw new IllegalArgumentException("숫자 범위를 초과했습니다.");
+            }
         }
         return sum;
     }
