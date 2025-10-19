@@ -69,14 +69,12 @@
 ## 🧱 프로젝트 구조
 ```plaintext
 src
- ├─ Application.java           # 프로그램 실행 진입점 (입출력 담당)
- ├─ StringAddCalculator.java   # 문자열 덧셈 로직의 핵심
- ├─ parser/                    # 구분자 관련 패키지
- │   └─ DelimiterParser.java   # 구분자 파싱 (기본/커스텀)
- ├─ validator/                 # 입력 검증 관련 패키지
- │   └─ InputValidator.java    # 입력 및 토큰 검증
- └─ util/                      # 유틸리티 패키지
-     └─ StringUtils.java       # 문자열 관련 유틸리티 (정규식 처리 등)
+ └─ main/
+     └─ java/
+         └─ calculator/
+             ├─ Application.java           # 프로그램 실행 진입점 (입출력 담당)
+             └─ StringAddCalculator.java   # 문자열 덧셈 로직의 핵심 (입력 정규화, 구분자 파싱, 검증, 합산 포함)
+
 ```
 ---
 
